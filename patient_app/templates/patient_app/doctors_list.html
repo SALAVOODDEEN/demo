@@ -1,0 +1,19 @@
+{% extends "patient_app/base.html" %}
+{% block content %}
+<h1>Doctors Lists</h1>
+{% if doctors %}
+<ul>
+    {% for doctor in doctors %}
+    <li>Doctor Name: {{doctor.name}}</li>
+    <li>Age: {{doctor.age}}</li>
+    <li>Address: {{doctor.address}}</li>
+    <li>Speciality: {{doctor.department}}</li>  <br>
+    {% endfor %}
+
+</ul>
+
+{% else %}
+<p> no items are available </p>
+{% endif %}
+
+{% endblock %}
